@@ -1,28 +1,28 @@
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
-Email <input id = 'email' type = 'text'/><br>
-Password <input id = 'password' type = 'password'/><br>
-<button id='login'>Sign Up</button>
+  Email <input id = 'email' type = 'text'/><br>
+  Password <input id = 'password' type = 'password'/><br>
+  <button id='login'>Sign Up</button>
 
-<script>
-var i = 0;
+  <script>
+  var i = 0;
   var all = {};
-    var email = $('#email').val();
-    var password = $('#password').val();
-    function storeData(){
+  var email = $('#email').val();
+  var password = $('#password').val();
+  function storeData(){
     password = $('#password').val();
     email = $('#email').val();
     for(i > 0;i=i;i++){
-    if(email.val() == all.email[1] && password.val() == all.email[0]){
-      alert('success! ');
+      if(email.val() == all.email[1] && password.val() == all.email[0]){
+        alert('success! ');
+      }
+      else{
+        alert('incorrect.');
+      }
     }
-    else{
-      alert('incorrect.');
-    }
-  }
 
     loginButton.text("Log in");
 
@@ -41,6 +41,6 @@ var i = 0;
 
 
 
-</script>
+  </script>
 </body>
 </html>
