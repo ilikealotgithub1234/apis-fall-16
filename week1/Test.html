@@ -16,21 +16,21 @@
     password = $('#password').val();
     email = $('#email').val();
     for(i > 0;i=i;i++){
-      if(email.val() == all.email[1] && password.val() == all.email[0]){
+      if(email.val() == all.data.email && password.val() == all.data.password){
         alert('success! ');
       }
       else{
         alert('incorrect.');
+        break;
       }
     }
 
     loginButton.text("Log in");
 
-    var data = [];
     all[email] = data;
-    data[1] = email;
-    data[0] = password;
-    console.log('username  pass  :' + data);
+    data.email = email;
+    data.password = password;
+    console.log('username: ' + data.email+'  password: '+data.password);
     console.log(all);
   }
 
