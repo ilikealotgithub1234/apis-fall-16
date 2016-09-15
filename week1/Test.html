@@ -1,0 +1,46 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+  Email <input id = 'email' type = 'text'/><br>
+  Password <input id = 'password' type = 'password'/><br>
+  <button id='login'>Sign Up</button>
+
+  <script>
+  var i = 0;
+  var all = {};
+  var email = $('#email').val();
+  var password = $('#password').val();
+  function storeData(){
+    password = $('#password').val();
+    email = $('#email').val();
+    for(i > 0;i=i;i++){
+      if(email.val() == all.data.email && password.val() == all.data.password){
+        alert('success! ');
+      }
+      else{
+        alert('incorrect.');
+        break;
+      }
+    }
+
+    loginButton.text("Log in");
+
+    all[email] = data;
+    data.email = email;
+    data.password = password;
+    console.log('username: ' + data.email+'  password: '+data.password);
+    console.log(all);
+  }
+
+
+
+  var loginButton = $('#login');
+  loginButton.click(storeData);
+
+
+
+  </script>
+</body>
+</html>
